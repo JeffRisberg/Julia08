@@ -171,7 +171,6 @@ Z_opt, x_opt, y_opt = optimal(p)
 Z_UB, x_best, y_best, UB, LB = lagrangian_relaxation(p)
 
 
-
 iter = 1:length(LB)
 fig = figure()
 
