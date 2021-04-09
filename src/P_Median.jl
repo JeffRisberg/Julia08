@@ -49,8 +49,6 @@ function optimal(p)
   return Z_opt, x_opt, y_opt
 end
 
-
-
 function lower_bound(lambda)
   # Step 1: Computing v
   v = Array{Float64}(undef, size(locations))
@@ -87,8 +85,6 @@ function lower_bound(lambda)
 
   return Z_D, x, y
 end
-
-
 
 function upper_bound(y)
   # Computing x, given y
@@ -164,12 +160,10 @@ function lagrangian_relaxation(p)
     return Z_UB, x_best, y_best, UB, LB
 end
 
-
 # Finding the exact optimal solution
 Z_opt, x_opt, y_opt = optimal(p)
 # Finding a solution by Lagrangian relaxation
 Z_UB, x_best, y_best, UB, LB = lagrangian_relaxation(p)
-
 
 iter = 1:length(LB)
 fig = figure()
